@@ -1,0 +1,79 @@
+TYdfExPXYs1QXVxquyQMBeoDKr3Pp6krOTk3OTZk
+In this level, you will need to use gdb to find the password as it is
+being passed as a parameter to a function with 6 parameters. For x86-64,
+the mnemonic for passing parameters using registers is Diane's Silk Dress
+Cost $89. (rdi rsi rdx rcx r8 r9)
+Dump of assembler code for function main:
+=> 0x00000000004012e4 <+0>:     push   rbp
+   0x00000000004012e5 <+1>:     mov    rbp,rsp
+   0x00000000004012e8 <+4>:     add    rsp,0xffffffffffffff80
+   0x00000000004012ec <+8>:     mov    rax,QWORD PTR fs:0x28
+   0x00000000004012f5 <+17>:    mov    QWORD PTR [rbp-0x8],rax
+   0x00000000004012f9 <+21>:    xor    eax,eax
+   0x00000000004012fb <+23>:    movabs rax,0x7463654d78756549
+   0x0000000000401305 <+33>:    mov    QWORD PTR [rbp-0x77],rax
+   0x0000000000401309 <+37>:    mov    BYTE PTR [rbp-0x6f],0x0
+   0x000000000040130d <+41>:    movabs rax,0x5467587a6c373273
+   0x0000000000401317 <+51>:    mov    QWORD PTR [rbp-0x6e],rax
+   0x000000000040131b <+55>:    mov    BYTE PTR [rbp-0x66],0x0
+   0x000000000040131f <+59>:    movabs rax,0x796b376550323648
+   0x0000000000401329 <+69>:    mov    QWORD PTR [rbp-0x65],rax
+   0x000000000040132d <+73>:    mov    BYTE PTR [rbp-0x5d],0x0
+   0x0000000000401331 <+77>:    movabs rax,0x586a4c534d307242
+   0x000000000040133b <+87>:    mov    QWORD PTR [rbp-0x5c],rax
+   0x000000000040133f <+91>:    mov    BYTE PTR [rbp-0x54],0x0
+   0x0000000000401343 <+95>:    movabs rax,0x51386f6177374f6b
+   0x000000000040134d <+105>:   mov    QWORD PTR [rbp-0x53],rax
+   0x0000000000401351 <+109>:   mov    BYTE PTR [rbp-0x4b],0x0
+   0x0000000000401355 <+113>:   movabs rax,0x4f436c794f733373
+   0x000000000040135f <+123>:   mov    QWORD PTR [rbp-0x4a],rax
+   0x0000000000401363 <+127>:   mov    BYTE PTR [rbp-0x42],0x0
+   0x0000000000401367 <+131>:   movabs rax,0x7a4b4e6d434d704b
+   0x0000000000401371 <+141>:   mov    QWORD PTR [rbp-0x41],rax
+   0x0000000000401375 <+145>:   mov    BYTE PTR [rbp-0x39],0x0
+   0x0000000000401379 <+149>:   movabs rax,0x6f464f4545555a79
+   0x0000000000401383 <+159>:   mov    QWORD PTR [rbp-0x38],rax
+   0x0000000000401387 <+163>:   mov    BYTE PTR [rbp-0x30],0x0
+   0x000000000040138b <+167>:   movabs rax,0x6b724a7a48775172
+   0x0000000000401395 <+177>:   mov    QWORD PTR [rbp-0x2f],rax
+   0x0000000000401399 <+181>:   mov    BYTE PTR [rbp-0x27],0x0
+   0x000000000040139d <+185>:   movabs rax,0x3042596c6d436553
+   0x00000000004013a7 <+195>:   mov    QWORD PTR [rbp-0x26],rax
+   0x00000000004013ab <+199>:   mov    BYTE PTR [rbp-0x1e],0x0
+   0x00000000004013af <+203>:   movabs rax,0x6b5a544f336b544f
+   0x00000000004013b9 <+213>:   mov    QWORD PTR [rbp-0x1d],rax
+   0x00000000004013bd <+217>:   mov    BYTE PTR [rbp-0x15],0x0
+   0x00000000004013c1 <+221>:   mov    eax,0x0
+   0x00000000004013c6 <+226>:   call   0x401166 <print_msg>
+   0x00000000004013cb <+231>:   mov    edi,0x402007
+   0x00000000004013d0 <+236>:   mov    eax,0x0
+   0x00000000004013d5 <+241>:   call   0x401060 <printf@plt>
+   0x00000000004013da <+246>:   lea    rax,[rbp-0x14]
+   0x00000000004013de <+250>:   mov    rsi,rax
+   0x00000000004013e1 <+253>:   mov    edi,0x40201c
+   0x00000000004013e6 <+258>:   mov    eax,0x0
+   0x00000000004013eb <+263>:   call   0x401070 <__isoc99_scanf@plt>
+   0x00000000004013f0 <+268>:   lea    rdx,[rbp-0x14]
+   0x00000000004013f4 <+272>:   lea    rax,[rbp-0x1d]
+   0x00000000004013f8 <+276>:   mov    r9,rdx
+   0x00000000004013fb <+279>:   mov    r8,rax
+   0x00000000004013fe <+282>:   mov    ecx,0x402021
+   0x0000000000401403 <+287>:   mov    edx,0x40202a
+   0x0000000000401408 <+292>:   mov    esi,0x402033
+   0x000000000040140d <+297>:   mov    edi,0x40203c
+   0x0000000000401412 <+302>:   call   0x401243 <foo>
+   0x0000000000401417 <+307>:   test   eax,eax
+   0x0000000000401419 <+309>:   je     0x401427 <main+323>
+   0x000000000040141b <+311>:   mov    edi,0x402045
+   0x0000000000401420 <+316>:   call   0x401030 <puts@plt>
+   0x0000000000401425 <+321>:   jmp    0x401431 <main+333>
+   0x0000000000401427 <+323>:   mov    edi,0x40204f
+   0x000000000040142c <+328>:   call   0x401030 <puts@plt>
+   0x0000000000401431 <+333>:   mov    eax,0x0
+   0x0000000000401436 <+338>:   mov    rcx,QWORD PTR [rbp-0x8]
+   0x000000000040143a <+342>:   xor    rcx,QWORD PTR fs:0x28
+   0x0000000000401443 <+351>:   je     0x40144a <main+358>
+   0x0000000000401445 <+353>:   call   0x401050 <__stack_chk_fail@plt>
+   0x000000000040144a <+358>:   leave  
+   0x000000000040144b <+359>:   ret    
+End of assembler dump.

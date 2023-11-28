@@ -1,0 +1,40 @@
+Dump of assembler code for function main:
+=> 0x000000000040126d <+0>:     push   rbp
+   0x000000000040126e <+1>:     mov    rbp,rsp
+   0x0000000000401271 <+4>:     sub    rsp,0x20
+   0x0000000000401275 <+8>:     mov    DWORD PTR [rbp-0x14],edi
+   0x0000000000401278 <+11>:    mov    QWORD PTR [rbp-0x20],rsi
+   0x000000000040127c <+15>:    mov    rax,QWORD PTR fs:0x28
+   0x0000000000401285 <+24>:    mov    QWORD PTR [rbp-0x8],rax
+   0x0000000000401289 <+28>:    xor    eax,eax
+   0x000000000040128b <+30>:    mov    eax,0x0
+   0x0000000000401290 <+35>:    call   0x401190 <print_msg>
+   0x0000000000401295 <+40>:    movss  xmm0,DWORD PTR [rip+0xda3]        # 0x402040
+   0x000000000040129d <+48>:    call   0x401166 <float_mov>
+   0x00000000004012a2 <+53>:    movd   eax,xmm0
+   0x00000000004012a6 <+57>:    mov    DWORD PTR [rbp-0xc],eax
+   0x00000000004012a9 <+60>:    mov    edi,0x40200b
+   0x00000000004012ae <+65>:    mov    eax,0x0
+   0x00000000004012b3 <+70>:    call   0x401060 <printf@plt>
+   0x00000000004012b8 <+75>:    lea    rax,[rbp-0x10]
+   0x00000000004012bc <+79>:    mov    rsi,rax
+   0x00000000004012bf <+82>:    mov    edi,0x402020
+   0x00000000004012c4 <+87>:    mov    eax,0x0
+   0x00000000004012c9 <+92>:    call   0x401070 <__isoc99_scanf@plt>
+   0x00000000004012ce <+97>:    movss  xmm0,DWORD PTR [rbp-0x10]
+   0x00000000004012d3 <+102>:   ucomiss xmm0,DWORD PTR [rbp-0xc]
+   0x00000000004012d7 <+106>:   jp     0x4012df <main+114>
+   0x00000000004012d9 <+108>:   ucomiss xmm0,DWORD PTR [rbp-0xc]
+   0x00000000004012dd <+112>:   je     0x4012eb <main+126>
+   0x00000000004012df <+114>:   mov    edi,0x402023
+   0x00000000004012e4 <+119>:   call   0x401030 <puts@plt>
+   0x00000000004012e9 <+124>:   jmp    0x4012f5 <main+136>
+   0x00000000004012eb <+126>:   mov    edi,0x40202e
+   0x00000000004012f0 <+131>:   call   0x401030 <puts@plt>
+   0x00000000004012f5 <+136>:   mov    eax,0x0
+   0x00000000004012fa <+141>:   mov    rdx,QWORD PTR [rbp-0x8]
+   0x00000000004012fe <+145>:   xor    rdx,QWORD PTR fs:0x28
+   0x0000000000401307 <+154>:   je     0x40130e <main+161>
+   0x0000000000401309 <+156>:   call   0x401050 <__stack_chk_fail@plt>
+   0x000000000040130e <+161>:   leave  
+   0x000000000040130f <+162>:   ret 
